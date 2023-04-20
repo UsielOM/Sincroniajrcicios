@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <h1>Ejemplo de función de callback dentro de una función asíncrona </h1>
+    </main>
+    <script>
+        function buscarEnBaseDeDatos(id, callBack) {
+            setTimeout(function() {
+                const result = {
+                    id: id,
+                    nombre: "Juan",
+                    edad: 25
+                };
+                callBack(result);
+            }, 2000);
+        }
+
+        function mostrarResultado(result) {
+            console.log("El resultado de la búsqueda es: " + result.nombre + ", " + result.edad + " años.");
+        }
+        buscarEnBaseDeDatos(123, mostrarResultado);
+    </script>
+</body>
+
+</html>

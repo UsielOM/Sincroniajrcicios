@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <h1>Ejemplo de función de callback básica: </h1>
+    </main>
+    <script>
+        function miFuncion(callback) {
+            console.log("Hola, esta es la función principal.");
+            callback();
+        }
+
+        function miCallback() {
+            console.log("Este es el callback de la función principal.");
+        }
+
+        miFuncion(miCallback);
+    </script>
+</body>
+
+</html>
